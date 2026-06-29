@@ -132,12 +132,12 @@ Smart_Metro_Ticket_Gate_Controller/
 
 ## Tools Used
 
-  Tool             Purpose
+  Tool            | Purpose
   ---------------- ------------------------
-  Verilog HDL      RTL Design
-  Vivado           Synthesis & Simulation
-  Icarus Verilog   Simulation
-  GTKWave          Waveform Analysis
+ - Verilog HDL    | RTL Design
+ - Vivado         | Synthesis & Simulation
+ - Icarus Verilog | Simulation
+ - GTKWave        | Waveform Analysis
 
 ------------------------------------------------------------------------
 
