@@ -110,7 +110,7 @@ Smart_Metro_Ticket_Gate_Controller/
 │── metro_ticket_gate_tb.v
 │── README.md
 │── waveforms/
-     ├── waveform.vcd
+     ├── metro_ticket_gate.vcd
 │── screenshots/
 │    ├── State_Diagram.png
 │    ├── RTL_schematic.png
