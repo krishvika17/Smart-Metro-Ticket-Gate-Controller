@@ -109,9 +109,11 @@ Smart_Metro_Ticket_Gate_Controller/
 │── metro_ticket_gate.v
 │── metro_ticket_gate_tb.v
 │── README.md
-│── docs/
+│── screenshots/
 │    ├── State_Diagram.png
-│    ├── RTL_Schematic.png
+│    ├── RTL_schematic.png
+│    ├── synthesized_schematic.png
+│    ├── simulation_output.png
 │    ├── Valid_Ticket_Waveform.png
 │    ├── Invalid_Ticket_Waveform.png
 │    └── Emergency_Maintenance_Waveform.png
@@ -125,30 +127,6 @@ Smart_Metro_Ticket_Gate_Controller/
 -   **Next-State Logic** -- Computes the next state.
 -   **Output Logic** -- Controls gate, alarm and display.
 -   **Entry Counter** -- Counts successful passenger entries.
-
-------------------------------------------------------------------------
-
-## Simulation Results
-
-### FSM State Diagram
-
-![State Diagram](docs/State_Diagram.png)
-
-### RTL Schematic
-
-![RTL Schematic](docs/RTL_Schematic.png)
-
-### Valid Ticket Transaction
-
-![Valid Ticket](docs/Valid_Ticket_Waveform.png)
-
-### Invalid Ticket Transaction
-
-![Invalid Ticket](docs/Invalid_Ticket_Waveform.png)
-
-### Emergency & Maintenance Modes
-
-![Emergency and Maintenance](docs/Emergency_Maintenance_Waveform.png)
 
 ------------------------------------------------------------------------
 
