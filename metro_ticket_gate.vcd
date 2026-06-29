@@ -1,0 +1,545 @@
+$date
+	Mon Jun 29 14:11:19 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module metro_ticket_gate_tb $end
+$var wire 1 ! gate_open $end
+$var wire 8 " entry_count [7:0] $end
+$var wire 4 # display [3:0] $end
+$var wire 1 $ alarm $end
+$var reg 1 % card_detected $end
+$var reg 1 & clk $end
+$var reg 1 ' emergency $end
+$var reg 1 ( maintenance $end
+$var reg 1 ) passenger_crossed $end
+$var reg 1 * reset $end
+$var reg 1 + ticket_valid $end
+$var reg 1 , timeout $end
+$scope module dut $end
+$var wire 1 % card_detected $end
+$var wire 1 & clk $end
+$var wire 1 ' emergency $end
+$var wire 8 - entry_count [7:0] $end
+$var wire 1 ( maintenance $end
+$var wire 1 ) passenger_crossed $end
+$var wire 1 * reset $end
+$var wire 1 + ticket_valid $end
+$var wire 1 , timeout $end
+$var parameter 4 . CARD_DETECTED $end
+$var parameter 4 / CLOSE_GATE $end
+$var parameter 4 0 DISP_CARD $end
+$var parameter 4 1 DISP_CLOSING $end
+$var parameter 4 2 DISP_EMERGENCY $end
+$var parameter 4 3 DISP_IDLE $end
+$var parameter 4 4 DISP_INVALID $end
+$var parameter 4 5 DISP_MAINTENANCE $end
+$var parameter 4 6 DISP_OPEN $end
+$var parameter 4 7 DISP_VALIDATING $end
+$var parameter 4 8 DISP_WAIT $end
+$var parameter 4 9 EMERGENCY $end
+$var parameter 4 : IDLE $end
+$var parameter 4 ; INVALID_TICKET $end
+$var parameter 4 < MAINTENANCE $end
+$var parameter 4 = OPEN_GATE $end
+$var parameter 4 > VALIDATE $end
+$var parameter 4 ? WAIT_FOR_PASSENGER $end
+$var reg 1 $ alarm $end
+$var reg 4 @ alarm_cnt [3:0] $end
+$var reg 1 A count_en $end
+$var reg 4 B display [3:0] $end
+$var reg 8 C entry_cnt_reg [7:0] $end
+$var reg 1 ! gate_open $end
+$var reg 4 D next_state [3:0] $end
+$var reg 4 E state [3:0] $end
+$upscope $end
+$scope task clk_step $end
+$var integer 32 F i [31:0] $end
+$var integer 32 G n [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 ?
+b10 >
+b11 =
+b1000 <
+b110 ;
+b0 :
+b111 9
+b100 8
+b10 7
+b11 6
+b1000 5
+b110 4
+b0 3
+b111 2
+b101 1
+b1 0
+b101 /
+b1 .
+$end
+#0
+$dumpvars
+b100 G
+b0 F
+bx E
+b0 D
+bx C
+bx B
+xA
+bx @
+bx -
+0,
+0+
+1*
+0)
+0(
+0'
+0&
+0%
+x$
+bx #
+bx "
+x!
+$end
+#5
+b0 E
+b0 @
+0A
+b0 #
+b0 B
+0$
+0!
+b0 "
+b0 -
+b0 C
+b1 F
+1&
+#10
+0&
+#15
+b10 F
+1&
+#20
+0&
+#25
+b11 F
+1&
+#30
+0&
+#35
+b100 F
+1&
+#36
+b0 F
+b1 G
+0*
+#40
+0&
+#45
+b1010 @
+b1 F
+1&
+#46
+b1 D
+b0 F
+1%
+#50
+0&
+#55
+b10 D
+b1 E
+b1 F
+1&
+#56
+b0 F
+#60
+0&
+#65
+b10 E
+b1 #
+b1 B
+b1 F
+1&
+#66
+b11 D
+b0 F
+1+
+#70
+0&
+#75
+b100 D
+b10 #
+b10 B
+b11 E
+b1 F
+1&
+#76
+b0 F
+#80
+0&
+#85
+b100 E
+b11 #
+b11 B
+1!
+b1 F
+1&
+#86
+b101 D
+b0 F
+1)
+#90
+0&
+#95
+b0 D
+1A
+b100 #
+b100 B
+b101 E
+b1 F
+1&
+#96
+b0 D
+b0 F
+b10 G
+0+
+0%
+0)
+#100
+0&
+#105
+b0 E
+b101 #
+b101 B
+0!
+0A
+b1 "
+b1 -
+b1 C
+b1 F
+1&
+#110
+0&
+#115
+b0 #
+b0 B
+b10 F
+1&
+#116
+b1 D
+b0 F
+1%
+#120
+0&
+#125
+b10 D
+b1 E
+b1 F
+1&
+#130
+0&
+#135
+b1 #
+b1 B
+b10 E
+b10 F
+1&
+#136
+b110 D
+b0 F
+0%
+#140
+0&
+#145
+b110 E
+b10 #
+b10 B
+b1 F
+1&
+#150
+0&
+#155
+b1001 @
+1$
+b110 #
+b110 B
+b10 F
+1&
+#156
+b0 F
+b1100 G
+#160
+0&
+#165
+b1000 @
+1$
+b1 F
+1&
+#170
+0&
+#175
+b111 @
+1$
+b10 F
+1&
+#180
+0&
+#185
+b110 @
+1$
+b11 F
+1&
+#190
+0&
+#195
+b101 @
+1$
+b100 F
+1&
+#200
+0&
+#205
+b100 @
+1$
+b101 F
+1&
+#210
+0&
+#215
+b11 @
+1$
+b110 F
+1&
+#220
+0&
+#225
+b10 @
+1$
+b111 F
+1&
+#230
+0&
+#235
+b1 @
+1$
+b1000 F
+1&
+#240
+0&
+#245
+b0 D
+b0 @
+1$
+b1001 F
+1&
+#250
+0&
+#255
+0$
+b0 E
+b1010 F
+1&
+#260
+0&
+#265
+b1010 @
+b0 #
+b0 B
+b1011 F
+1&
+#270
+0&
+#275
+b1100 F
+1&
+#276
+b1 D
+b0 F
+b1 G
+1%
+#280
+0&
+#285
+b10 D
+b1 E
+b1 F
+1&
+#286
+b10 D
+b0 F
+b10 G
+1+
+#290
+0&
+#295
+b11 D
+b1 #
+b1 B
+b10 E
+b1 F
+1&
+#300
+0&
+#305
+b100 D
+b11 E
+b10 #
+b10 B
+b10 F
+1&
+#306
+b0 F
+b1 G
+#310
+0&
+#315
+b11 #
+b11 B
+1!
+b100 E
+b1 F
+1&
+#316
+b101 D
+b0 F
+1,
+#320
+0&
+#325
+b0 D
+b101 E
+b100 #
+b100 B
+b1 F
+1&
+#326
+b0 D
+b0 F
+b10 G
+0+
+0%
+0,
+#330
+0&
+#335
+b101 #
+b101 B
+0!
+b0 E
+b1 F
+1&
+#340
+0&
+#345
+b0 #
+b0 B
+b10 F
+1&
+#346
+b0 F
+b1 G
+1'
+#350
+0&
+#355
+b111 D
+b111 E
+b1 F
+1&
+#356
+b0 F
+#360
+0&
+#365
+b111 #
+b111 B
+1$
+1!
+b1 F
+1&
+#366
+b0 D
+b0 F
+b10 G
+0'
+#370
+0&
+#375
+1$
+b0 E
+b1 F
+1&
+#380
+0&
+#385
+b0 #
+b0 B
+0!
+0$
+b10 F
+1&
+#386
+b0 F
+1(
+#390
+0&
+#395
+b1000 D
+b1000 E
+b1 F
+1&
+#400
+0&
+#405
+b1000 #
+b1000 B
+b10 F
+1&
+#406
+b0 F
+b11 G
+1+
+1%
+#410
+0&
+#415
+b1 F
+1&
+#420
+0&
+#425
+b10 F
+1&
+#430
+0&
+#435
+b11 F
+1&
+#436
+b0 D
+b0 F
+b10 G
+0(
+0+
+0%
+#440
+0&
+#445
+b0 E
+b1 F
+1&
+#450
+0&
+#455
+b0 #
+b0 B
+b10 F
+1&
+#456
